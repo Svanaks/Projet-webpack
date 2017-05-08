@@ -3,7 +3,7 @@
 Clone the repository
 
 ```sh
-$ git clone https://github.com/lepetitdevfr/Projet-webpack.git
+$ git clone https://github.com/Svanaks/Projet-webpack.git
 ```
 
 Install the dependencies and devDependencies.
