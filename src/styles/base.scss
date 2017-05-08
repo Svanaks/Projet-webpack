@@ -1,0 +1,251 @@
+@import url("http://overpass-30e2.kxcdn.com/overpass.css");
+$hover: #5B90C8;
+$border: #858585;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@viewport {
+  width: device-width;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'overpass';
+  font-size: 1.2rem;
+}
+
+ul {
+  padding-left: 20px;
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s linear;
+}
+
+body {
+  background: url("./../assets/img/swirl_pattern.png") repeat !important;
+  font-family: arial;
+  font-size: 1rem;
+}
+
+.row , .col {
+  display: flex;
+}
+
+.col {
+  flex-direction: column;
+}
+
+.title {
+  margin: 20px 0 10px;
+}
+/////////////////
+.grid-app {
+  max-width: 1280px;
+  width: 95%;
+  margin: 0 auto;
+}
+
+.grid-header {
+  height: 80px;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid $border;
+}
+
+.grid-page {
+  min-height: calc(100vh - (80px + 60px) );
+}
+
+.grid-footer {
+  height: 60px;
+  align-items: center;
+  justify-content: flex-end;
+  border-top: 1px solid $border;
+}
+/////////////////
+.logo {
+  max-width: 80px;
+}
+
+.nav.main .list {
+  display: flex;
+}
+
+.nav.main .item {
+  margin-right: 20px;
+}
+
+.nav.main .item:last-of-type {
+  margin-right: 0;
+}
+
+.nav.main .link.active,
+a.active, a:hover,
+.nav.main .link:hover {
+  color: $hover;
+}
+
+.signature {
+  flex: 0 0 20%;
+  max-width: 195px;
+  text-align: right;
+}
+
+.form{
+  width: 80%;
+  margin:auto;
+
+}
+
+.form input, .form textarea{
+  width: 100%;
+  float: left;
+  margin:10px;
+  min-height: 30px;
+}
+
+.form label{
+  width: 100%;
+  float: left;
+  margin-left: 10px;
+}
+
+.form input[type='submit']{
+  width: 20%;
+  margin-left: 10px;
+}
+
+/* TEST */
+table {
+  background: #f5f5f5;
+  border-collapse: separate;
+  box-shadow: inset 0 1px 0 #fff;
+  font-size: 12px;
+  line-height: 24px;
+  margin: 30px auto;
+  text-align: left;
+  width: 800px;
+} 
+
+th {
+  background: linear-gradient(#777, #444);
+  border-left: 1px solid #555;
+  border-right: 1px solid #777;
+  border-top: 1px solid #555;
+  border-bottom: 1px solid #333;
+  box-shadow: inset 0 1px 0 #999;
+  color: #fff;
+  font-weight: bold;
+  padding: 10px 15px;
+  position: relative;
+  text-shadow: 0 1px 0 #000;  
+}
+
+th:after {
+  background: linear-gradient(rgba(255,255,255,0), rgba(255,255,255,.08));
+  content: '';
+  display: block;
+  height: 25%;
+  left: 0;
+  margin: 1px 0 0 0;
+  position: absolute;
+  top: 25%;
+  width: 100%;
+}
+
+th:first-child {
+  border-left: 1px solid #777;  
+  box-shadow: inset 1px 1px 0 #999;
+}
+
+th:last-child {
+  box-shadow: inset -1px 1px 0 #999;
+}
+
+td {
+  border-right: 1px solid #fff;
+  border-left: 1px solid #e8e8e8;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #e8e8e8;
+  padding: 10px 15px;
+  position: relative;
+  transition: all 300ms;
+}
+
+td:first-child {
+  box-shadow: inset 1px 0 0 #fff;
+} 
+
+td:last-child {
+  border-right: 1px solid #e8e8e8;
+  box-shadow: inset -1px 0 0 #fff;
+} 
+
+
+
+tr:nth-child(odd) td {
+  background: #f1f1f1;  
+}
+
+tr:last-of-type td {
+  box-shadow: inset 0 -1px 0 #fff; 
+}
+
+tr:last-of-type td:first-child {
+  box-shadow: inset 1px -1px 0 #fff;
+} 
+
+tr:last-of-type td:last-child {
+  box-shadow: inset -1px -1px 0 #fff;
+} 
+
+
+
+
+
+$reddish : #E74C3C;
+$redder : #C0392B;
+$cloud : #ECF0F1;
+
+.flat-button {
+  position: relative;
+  width: 250px; height: 60px;
+  background: $reddish;
+  margin: 0 auto;
+  margin-top: 40px;
+  overflow: hidden;
+  z-index: 1;
+  cursor: pointer;
+  transition: color .3s;
+  /* Typo */
+  line-height: 60px;
+  text-align: center;
+  color: #fff;
+}
+
+.flat-button:after {
+  position: absolute;
+  top: 90%; left: 0;
+  width: 100%; height: 100%;
+  background: $redder;
+  content: "";
+  z-index: -2;
+  transition: transform .3s;
+}
+
+.flat-button:hover::after {
+  transform: translateY(-80%);
+  transition: transform .3s;
+}
