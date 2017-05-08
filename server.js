@@ -36,8 +36,7 @@ app.get('/articles',function (req,res) {
 })
 
 app.post('/newArticle',function (req,res) {
-	console.log("REQ="+req.body.title);
-	connection.query('INSERT INTO articles (title, content) VALUES (title, content)', function (error, results, fields) {
+	connection.query('INSERT INTO articles (title, content) VALUES (req.body.title, req.body.content)', function (error, results, fields) {
 		if (error) throw error;
 		console.log(results);
 		res.json(results);
