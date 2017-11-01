@@ -33,6 +33,8 @@ Edit server.js and set your mail and MySql informations
 	});
 ```
 
+You need to import the blog.sql file and set the date column to null by default.
+
 If you are using GMAIL, you have to activate this option.
 https://myaccount.google.com/lesssecureapps
 
